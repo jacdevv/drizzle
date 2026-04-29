@@ -15,7 +15,7 @@ function Book() {
             <div className="h-[400px] overflow-hidden pt-8">
                 <img
                     src="/restaurant.png"
-                    className="h-full w-full object-cover object-bottom"
+                    className="h-full w-full object-cover object-middle"
                 />
             </div>
         </section>
