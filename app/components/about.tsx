@@ -1,13 +1,17 @@
+import Image from "next/image";
 import Badge from "./badge";
 
 function About() {
     return (
         <section className="mx-16 mt-24 flex justify-between items-center">
             <Left />
-            <div className="rounded-2xl space-y-2">
-                <img
+            <div className="relative aspect-[4/3] w-[500px] overflow-hidden rounded-2xl">
+                <Image
                     src="/outside.jpg"
-                    className="w-[500px] aspect-[4/3] rounded-2xl object-cover"
+                    alt="Restaurant exterior seating area"
+                    fill
+                    sizes="500px"
+                    className="object-cover"
                 />
             </div>
         </section>

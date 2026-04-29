@@ -1,11 +1,12 @@
 "use client";
 import { ArrowDownIcon } from "@phosphor-icons/react";
+import Image from "next/image";
 
 function Book() {
     return (
         <section className="relative">
-            <div className="bg-background rounded-full p-2 w-44 aspect-square absolute left-1/2 -translate-x-1/2 -translate-y-10">
-                <div className="w-full h-full -space-y-10 grid place-items-center text-background text-center text-xl font-semibold bg-[#C03A2C] rounded-full">
+            <div className="absolute left-1/2 z-10 aspect-square w-44 -translate-x-1/2 -translate-y-10 rounded-full bg-background p-2">
+                <div className="w-full  h-full hover:scale-105 -space-y-10 grid place-items-center text-background text-center text-xl font-semibold bg-[#C03A2C] rounded-full">
                     <ArrowDownIcon size={32} />
                     <p>
                         RESERVE A <br /> TABLE
@@ -13,10 +14,15 @@ function Book() {
                 </div>
             </div>
             <div className="h-[400px] overflow-hidden pt-8">
-                <img
-                    src="/restaurant.png"
-                    className="h-full w-full object-cover object-middle"
-                />
+                <div className="relative h-full">
+                    <Image
+                        src="/restaurant.png"
+                        alt="Restaurant dining room"
+                        fill
+                        sizes="100vw"
+                        className="object-cover object-center"
+                    />
+                </div>
             </div>
         </section>
     );
