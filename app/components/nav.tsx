@@ -1,7 +1,7 @@
 function Nav() {
     return (
         <nav>
-            <div className="grid h-12 w-screen grid-cols-[1fr_auto_1fr] items-center px-18">
+            <div className="grid w-screen grid-cols-[1fr_auto_1fr] items-center px-18">
                 <div className="flex h-full items-center justify-between">
                     <Item tab="HOME" />
                     <ItemSeperator />
@@ -12,7 +12,7 @@ function Nav() {
                 </div>
 
                 <div className="px-10">
-                    <p className="text-[#280302] font-serif text-4xl font-bold">
+                    <p className="text-[#280302] font-serif text-5xl font-bold">
                         Drizzle.
                     </p>
                 </div>
@@ -33,7 +33,11 @@ function Nav() {
 }
 
 function Item({ tab }: { tab: string }) {
-    return <p className="text-[#280302] text-sm font-semibold">{tab}</p>;
+    return (
+        <p className="text-[#280302] h-16 grid place-items-center text-sm font-semibold">
+            {tab}
+        </p>
+    );
 }
 
 function ItemSeperator() {
