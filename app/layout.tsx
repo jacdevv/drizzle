@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, Instrument_Serif } from "next/font/google";
+import { DM_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
-const instrumentSans = Instrument_Sans({
-    variable: "--font-instrument-sans",
+const dmSans = DM_Sans({
+    variable: "--font-dm-sans",
     subsets: ["latin"],
 });
 
@@ -26,7 +26,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={`${instrumentSans.variable} ${instrumentSerif.variable} h-full antialiased`}
+            className={`${dmSans.variable} ${instrumentSerif.variable} h-full antialiased`}
         >
             <body className="min-h-full flex flex-col">{children}</body>
         </html>
